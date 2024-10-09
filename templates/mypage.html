@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Page</title>
+</head>
+<body>
+    <h1>Welcome to My Page, {{ user.username }}!</h1>
+    <p>Choose an action:</p>
+    <a href="{% url 'object_detection' %}"><button>Object Detection</button></a>
+    <a href="{% url 'database_view' %}"><button>View Database</button></a>
+
+    <br><br>
+    <a href="{% url 'account_logout' %}">Logout</a>
+</body>
+</html>

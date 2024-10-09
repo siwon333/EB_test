@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<form method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    <input type="file" name="image" required>
+    <button type="submit">Detect Objects</button>
+</form>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object Detection</title>
+</head>
+<body>
+    <h1>Object Detection (Real-Time)</h1>
+    <div>
+        <img src="{% url 'object_detection' %}" width="640" height="480" alt="Live Object Detection">
+    </div>
+
+    <br>
+    <a href="{% url 'mypage' %}">Back to My Page</a>
+</body>
+</html>
+

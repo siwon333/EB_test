@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detected Objects</title>
+</head>
+<body>
+    <h1>Detected Objects</h1>
+
+    <table border="1">
+        <tr>
+            <th>Object Name</th>
+            <th>Detection Time</th>
+        </tr>
+        {% for object in objects %}
+        <tr>
+            <td>{{ object.object_name }}</td>
+            <td>{{ object.timestamp }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+
+    <br>
+    <a href="{% url 'mypage' %}">Back to My Page</a>
+</body>
+</html>
