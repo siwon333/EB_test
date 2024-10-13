@@ -1,0 +1,19 @@
+<!-- templates/main/profile.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>프로필</title>
+</head>
+<body>
+    <h1>프로필 페이지</h1>
+    <p>사용자를 선택하세요:</p>
+    <ul>
+        <!-- 사용자 1 클릭 시 홈 페이지로 이동 -->
+        <li><a href="{% url 'home' %}">사용자 1</a></li>
+        <!-- 필요시 다른 사용자들도 추가 가능 -->
+        <li>사용자 2 (준비 중)</li>
+    </ul>
+</body>
+</html>

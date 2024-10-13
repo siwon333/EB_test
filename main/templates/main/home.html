@@ -1,0 +1,19 @@
+<!-- templates/main/home.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>홈</title>
+</head>
+<body>
+    <h1>홈 페이지</h1>
+    <p>사용자 1의 홈 페이지입니다.</p>
+    <ul>
+        <li><a href="{% url 'add_food' %}">음식 추가</a></li>
+        <li><a href="{% url 'recipes' %}">레시피</a></li>
+        <li><a href="{% url 'expiration' %}">유통기한 관리</a></li>
+        <li><a href="{% url 'community' %}">커뮤니티</a></li>
+    </ul>
+</body>
+</html>

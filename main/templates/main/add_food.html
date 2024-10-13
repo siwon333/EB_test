@@ -1,0 +1,23 @@
+<!-- templates/main/add_food.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>음식 추가</title>
+</head>
+<body>
+    <h1>음식 추가</h1>
+    <form method="POST">
+        {% csrf_token %}
+        {{ form.name.label_tag }} {{ form.name }} <br><br>
+        
+        <!-- 여기서 type="date"로 수정 -->
+        <label for="id_expiration_date">Expiration date:</label>
+        <input type="date" id="id_expiration_date" name="expiration_date" required><br><br>
+        
+        <button type="submit">음식 추가</button>
+    </form>
+    <a href="{% url 'home' %}">홈으로 돌아가기</a>
+</body>
+</html>

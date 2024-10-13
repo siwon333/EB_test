@@ -1,0 +1,25 @@
+<!-- templates/main/community.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>커뮤니티</title>
+</head>
+<body>
+    <h1>커뮤니티</h1>
+    <p>여기서 다른 사용자들과 소통하세요!</p>
+    <form method="post">
+        {% csrf_token %}
+        <label for="post_content">글쓰기:</label><br>
+        <textarea id="post_content" name="post_content" rows="4" cols="50"></textarea><br><br>
+        <input type="submit" value="글 올리기">
+    </form>
+    <ul>
+        <li>사용자 A: 안녕하세요!</li>
+        <li>사용자 B: 좋은 정보 감사합니다.</li>
+        <!-- 동적으로 글 목록을 추가 가능 -->
+    </ul>
+    <a href="{% url 'home' %}">홈으로 돌아가기</a>
+</body>
+</html>
